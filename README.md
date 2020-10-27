@@ -1,5 +1,5 @@
 # ProyectoGrupalDI
 
 Miembros del grupo:
-  Alejando Begiens Caña
+  Alejando Begines Caña
   
