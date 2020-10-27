@@ -2,12 +2,15 @@ package Controller;
 
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Shape;
 
 public class Controller {
 
@@ -15,6 +18,16 @@ public class Controller {
     private Label label;
     @FXML
     private Label label2;
+    
+    @FXML
+    private Button fechaButton;
+    @FXML
+    private Label fechaLabel;
+    @FXML 
+    private Button buttonSquare;
+    @FXML
+    private Shape square;
+    
     
     ArrayList<Color> colores = new ArrayList<Color>();
     
@@ -35,6 +48,16 @@ public class Controller {
         colores.add(Color.MAGENTA);
         colores.add(Color.TURQUOISE);
         colores.add(Color.PURPLE);
+        
+        fechaButton.setOnMouseClicked(event -> {
+        	fechaLabel.setText(new Date().toString());
+        });
+        
+        Random r = new Random();
+        buttonSquare.setOnMouseClicked(event -> {
+        	square.setRotate(square.getRotate() + 20);
+        	square.setFill(colores.get(r.nextInt(4)));
+        });
         
     
     }
