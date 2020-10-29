@@ -5,11 +5,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <Pane prefHeight="503.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <children>
         <Label fx:id="label" layoutX="324.0" layoutY="6.0" text="Label" />
-      <Label fx:id="label2" layoutX="572.0" layoutY="243.0" text="SegundaEtiqueta" />
+      <Label fx:id="label2" layoutX="572.0" layoutY="243.0" text="Hexadecimal" />
       <Button layoutX="316.0" layoutY="231.0" mnemonicParsing="false" onAction="#cambiarColor" text="Color" />
       <Label fx:id="fechaLabel" layoutX="355.0" layoutY="481.0" text="??" />
       <Button fx:id="fechaButton" layoutX="269.0" layoutY="477.0" mnemonicParsing="false" text="Fecha" />

@@ -1,6 +1,7 @@
 package Controller;
 
 
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
@@ -34,8 +35,14 @@ public class Controller {
     
     public void cambiarColor(ActionEvent event) {
     	Random r = new Random();
-    	label2.setTextFill(colores.get(r.nextInt(4)));
-    	label.setTextFill(colores.get(r.nextInt(4)));
+    	Color aleatorio = colores.get(r.nextInt(9));
+    	label2.setTextFill(aleatorio);
+    	label.setTextFill(aleatorio);
+    	
+    	label2.setText("Color: "+ aleatorio);
+    	
+    	
+
     }
 
     public void initialize() {
@@ -48,6 +55,12 @@ public class Controller {
         colores.add(Color.MAGENTA);
         colores.add(Color.TURQUOISE);
         colores.add(Color.PURPLE);
+        
+        colores.add(Color.BROWN);
+        colores.add(Color.YELLOW);
+        colores.add(Color.GREEN);
+        colores.add(Color.GOLD);
+        colores.add(Color.PINK);
         
         fechaButton.setOnMouseClicked(event -> {
         	fechaLabel.setText(new Date().toString());
